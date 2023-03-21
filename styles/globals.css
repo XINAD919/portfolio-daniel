@@ -12,6 +12,90 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.font-12 {
+  font-size: 0.8125rem;
+}
+.font-13 {
+  font-size: 0.8125rem;
+}
+.font-14 {
+  font-size: 0.875rem;
+}
+.font-16 {
+  font-size: 1rem;
+}
+.font-17 {
+  font-size: 1.0625rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+}
+.font-20 {
+  font-size: 1.25rem;
+}
+.font-21 {
+  font-size: 1.3125rem;
+}
+.font-24 {
+  font-size: 1.5rem;
+}
+.font-28 {
+  font-size: 1.75rem;
+}
+.font-30 {
+  font-size: 1.875rem;
+}
+.font-32 {
+  font-size: 2rem;
+}
+.font-34 {
+  font-size: 2.125rem;
+}
+.font-35 {
+  font-size: 2.1875rem;
+}
+.font-36 {
+  font-size: 2.25rem;
+}
+.font-39 {
+  font-size: 2.4375rem;
+}
+.font-40 {
+  font-size: 2.5rem;
+}
+.font-42 {
+  font-size: 2.625rem;
+}
+.font-50 {
+  font-size: 3.125rem;
+}
+.font-55 {
+  font-size: 3.4375rem;
+}
+.font-64 {
+  font-size: 4rem;
+}
+.font-100 {
+  font-size: 6.25rem;
 }
 
 /*# sourceMappingURL=globals.css.map */
