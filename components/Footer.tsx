@@ -1,13 +1,34 @@
 import React from "react";
+import Image from "next/image";
 const Footer = () => {
   return (
     <div>
-      <div className=''>
-        <a href=''></a>
-        <a href=''></a>
-        <a href=''></a>
-        <a href=''></a>
-      </div>
+      <footer className='flex items-center justify-center gap-4 py-4'>
+        <a href='https://github.com/XINAD919' target='__blank'>
+          <Image
+            src={"/Github_black.svg"}
+            alt={"outlook icon"}
+            width={30}
+            height={30}
+          />
+        </a>
+        <a href='mailto:da_919@hotmail.com' target='__blank'>
+          <Image
+            src={"/Outlook_black.svg"}
+            alt={"outlook icon"}
+            width={30}
+            height={30}
+          />
+        </a>
+        <a href='https://wa.me/573107073803' target='__blank'>
+          <Image
+            src={"/WhatsApp_black.svg"}
+            alt={"outlook icon"}
+            width={30}
+            height={30}
+          />
+        </a>
+      </footer>
     </div>
   );
 };
