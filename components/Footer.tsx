@@ -20,6 +20,17 @@ const Footer = () => {
             height={30}
           />
         </a>
+        <a
+          href='https://www.linkedin.com/in/daniel-castano-barrera/'
+          target='__blank'
+        >
+          <Image
+            src={"/Linkedin.svg"}
+            alt={"linkedin icon"}
+            width={30}
+            height={30}
+          />
+        </a>
         <a href='https://wa.me/573107073803' target='__blank'>
           <Image
             src={"/WhatsApp_black.svg"}
