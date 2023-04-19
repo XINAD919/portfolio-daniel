@@ -15,6 +15,78 @@ body {
   -webkit-user-select: none;
   user-select: none;
   scroll-behavior: smooth;
+  background-color: #0e0e10;
+}
+
+h1,
+h2,
+span,
+a {
+  color: #BBE1FA;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bg-primary {
+  background-color: #0e0e10;
+}
+
+.bg-secondary {
+  background-color: #0F4C75;
+}
+
+.bg-tertiary {
+  background-color: #3282B8;
+}
+
+.bg-quaternary {
+  background-color: #BBE1FA;
+}
+
+.text-primary {
+  color: #0e0e10;
+}
+
+.text-secondary {
+  color: #0F4C75;
+}
+
+.text-tertiary {
+  color: #3282B8;
+}
+
+.text-quaternary {
+  color: #BBE1FA;
+}
+
+.border-button {
+  border: 1px solid #BBE1FA;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.border-button:hover {
+  background-color: #BBE1FA;
+  color: #0e0e10;
+}
+.border-button:hover img {
+  filter: invert(1) sepia(1) saturate(1) hue-rotate(180deg);
+}
+
+.nav-links .nav-item {
+  border-bottom: 0px transparent solid;
+  transition: border-bottom 0.25s ease;
+}
+.nav-links .nav-item:hover {
+  border-bottom: 1px #BBE1FA solid;
 }
 
 ::-webkit-scrollbar {
@@ -27,8 +99,8 @@ body {
   border-radius: 50px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.rounded-100 {
+  border-radius: 100%;
 }
 
 .font-12 {
