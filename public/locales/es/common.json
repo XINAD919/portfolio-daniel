@@ -1,0 +1,12 @@
+{
+	"title": "portafolio Daniel",
+	"description": "Portafolio de Daniel",
+	"h1": "Hola, soy Daniel",
+  "download": "Descargar",
+	"about": {
+		"title": "Sobre mi",
+		"description": ""
+	},
+	"projects": "Proyectos",
+	"contact": "Contacta me"
+}
