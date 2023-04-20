@@ -31,7 +31,7 @@ const Header = () => {
           <Link href='#Contact'>{t("contact")}</Link>
           <Link className='flex items-center' href='' locale={changeTo}>
             {t("lang")}
-            <Image src={"/Lang.svg"} alt='lang icon' width={19} height={19} />
+            <Image src={"Lang.svg"} alt='lang icon' width={19} height={19} />
           </Link>
         </div>
       </div>
