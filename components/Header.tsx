@@ -15,7 +15,7 @@ const Header = () => {
           <div className='flex rounded-full h-12 w-12'>
             <Link href='/' className='flex items-center gap-2'>
               <Image
-                src={"d.svg"}
+                src={"D.svg"}
                 alt='imagen de la letra D dentron de un circulo'
                 width={40}
                 height={40}
