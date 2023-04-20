@@ -30,8 +30,8 @@ const Header = () => {
           <Link href='#Skills'>{t("skills")}</Link>
           <Link href='#Contact'>{t("contact")}</Link>
           <Link className='flex items-center' href='' locale={changeTo}>
+            <Image src={"lang.svg"} alt='lang icon' width={19} height={19} />
             {t("lang")}
-            <Image src={"Lang.svg"} alt='lang icon' width={19} height={19} />
           </Link>
         </div>
       </div>
