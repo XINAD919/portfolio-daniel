@@ -34,7 +34,7 @@ const Footer = () => {
         <a href='https://wa.me/573107073803' target='__blank'>
           <Image
             src={"WhatsApp.svg"}
-            alt={"outlook icon"}
+            alt={"whatsapp icon"}
             width={30}
             height={30}
           />
