@@ -25,7 +25,7 @@ const Footer = () => {
           target='__blank'
         >
           <Image
-            src={"Linkedin.svg"}
+            src={"linkedin.svg"}
             alt={"linkedin icon"}
             width={30}
             height={30}
