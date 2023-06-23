@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 $color-primary: #0e0e10;
 $color-secondary: #0F4C75;
@@ -22,7 +23,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
   scroll-behavior: smooth;
-  background-color: $color-primary;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -41,27 +42,35 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
 }
+
 .bg-primary {
   background-color: $color-primary;
 }
+
 .bg-secondary {
   background-color: $color-secondary;
 }
+
 .bg-tertiary {
   background-color: $color-tertiary;
 }
+
 .bg-quaternary {
   background-color: $color-quaternary;
 }
+
 .text-primary {
   color: $color-primary;
 }
+
 .text-secondary {
   color: $color-secondary;
 }
+
 .text-tertiary {
   color: $color-tertiary;
 }
+
 .text-quaternary {
   color: $color-quaternary;
 }
@@ -86,6 +95,7 @@ h2 {
   .nav-item {
     border-bottom: 0px transparent solid;
     transition: border-bottom .25s ease;
+
     &:hover {
       border-bottom: 1px $color-quaternary solid;
     }
