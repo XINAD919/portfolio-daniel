@@ -3,5 +3,11 @@
   "projects": "Proyectos",
   "skills": "Conocimientos",
   "contact": "Contacta me",
-  "lang": "Es"
+  "lang": "Es",
+  "links": {
+    "about": "sobre-mi",
+    "projects": "proyectos",
+    "skills": "habilidades",
+    "contact": "contacto"
+  }
 }

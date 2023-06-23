@@ -3,5 +3,11 @@
   "projects": "Projects",
   "skills": "Skills",
   "contact": "Contact",
-  "lang": "En"
+  "lang": "En",
+  "links": {
+    "about": "about-me",
+    "projects": "projects",
+    "skills": "skills",
+    "contact": "contact"
+  }
 }

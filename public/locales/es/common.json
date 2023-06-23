@@ -1,12 +1,25 @@
 {
-	"title": "portafolio Daniel",
-	"description": "Portafolio de Daniel",
-	"h1": "Hola, soy Daniel",
+  "title": "portafolio Daniel",
+  "description": "Portafolio de Daniel",
+  "h1": "Hola, soy Daniel",
   "download": "Descargar",
-	"about": {
-		"title": "Sobre mi",
-		"description": ""
-	},
-	"projects": "Proyectos",
-	"contact": "Contacta me"
+  "about": {
+    "title": "Sobre mi",
+    "description": ""
+  },
+  "projects":{
+    "title":"Proyectos"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "contact": {
+    "title": "Contacto"
+  },
+  "links": {
+    "about": "sobre-mi",
+    "projects": "proyectos",
+    "skills": "habilidades",
+    "contact": "contacto"
+  }
 }
