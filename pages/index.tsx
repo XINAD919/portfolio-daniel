@@ -46,13 +46,16 @@ export default function Home() {
               <h1 className='text-8xl mb-12 self-center'>{t("h1")}</h1>
               <div className='action_buttons flex gap-8'>
                 <DownloadButton fileName='CV Daniel' />
-                <Link href='#Contact' className='border-button px-4 py-2'>
+                <Link
+                  href={`#${t("links.contact")}`}
+                  className='border-button px-4 py-2'
+                >
                   {t("contact.title")}
                 </Link>
               </div>
             </div>
             <div className=' w-1/2 max-h-96'>
-              <ImageContainer className='hidden md:block'/>
+              <ImageContainer className='hidden md:block' />
             </div>
           </div>
         </section>
