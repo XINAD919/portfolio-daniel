@@ -1,7 +1,8 @@
-import React, { ReactNode, FC } from "react";
+import React, { ReactNode, FC, useEffect, useContext } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
+import { CustomThemeProvider, ThemeContext } from "../context/ThemeContext";
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,13 +14,30 @@ const StyledApp = styled.div`
   transition: all 0.25s ease;
 `;
 
-const PublicLayout: FC<LayoutProps> = ({ children }) => {
+  const lightTheme = {
+    body: "#fff",
+    backgroundColor: "#fff",
+    color: "#000",
+  };
+  const darkTheme = {
+    body: "#0e0e10",
+    backgroundColor: "#0e0e10",
+    color: "#fff",
+  };
+
+  const PublicLayout: FC<LayoutProps> = ({ children }) => {
+
+  const actualTheme = useTheme();
+  const{theme}=useContext(ThemeContext)
+  const activeTheme = theme === "Dark" ? darkTheme : lightTheme;
+  
   return (
-    <StyledApp>
-      <Header />
-      <main className='w-4/5 mx-auto'>{children}</main>
-      <Footer />
-    </StyledApp>
+      
+      <StyledApp theme={activeTheme}>
+        <Header />
+        <main className='w-4/5 mx-auto'>{children}</main>
+        <Footer />
+      </StyledApp>
   );
 };
 

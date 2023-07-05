@@ -2,11 +2,12 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 import { Analytics } from "@vercel/analytics/react";
-import useDarkMode from "../hooks/useDarkMode";
 import { ThemeProvider } from "styled-components";
+import { useContext } from "react";
+import { CustomThemeProvider, ThemeContext } from "../context/ThemeContext";
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [theme, toggleTheme] = useDarkMode();
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const lightTheme = {
     body: "#fff",
     backgroundColor: "#fff",
@@ -17,15 +18,16 @@ const App = ({ Component, pageProps }: AppProps) => {
     backgroundColor: "#0e0e10",
     color: "#fff",
   };
+
+  const activeTheme = theme === "Dark" ? darkTheme : lightTheme;
+
   return (
-    <>
-    <ThemeProvider theme={theme === 'Dark' ? darkTheme : lightTheme}>
-      <Component {...pageProps} 
-       toggleTheme={toggleTheme}
-        />
-      <Analytics />
-    </ThemeProvider>
-    </>
+    <CustomThemeProvider>
+      <ThemeProvider theme={activeTheme}>
+        <Component {...pageProps} toggleTheme={toggleTheme} theme={theme}/>
+        <Analytics />
+      </ThemeProvider>
+    </CustomThemeProvider>
   );
 };
 

@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import useDarkMode from "../hooks/useDarkMode";
-
+import React, { useContext, useState } from "react";
+import { ThemeContext } from "../context/ThemeContext"; 
 const DarkMode = () => {
-const [isToggled ,setIsToggled]=useState(true);
-const onToggle=()=>{
-  setIsToggled(!isToggled);
-}
+  const {theme, toggleTheme}=useContext(ThemeContext)
   return (
     <div className='dark-mode-toggle'>
       <label className='switch'>
-        <input type='checkbox' checked={isToggled} onChange={onToggle} />
+        <input
+          type='checkbox'
+          checked={theme === "Dark" }
+          onChange={() => toggleTheme()}
+        />
         <span className='slider round' />
       </label>
     </div>
   );
 };
 
-export default DarkMode;
+export default  DarkMode;
