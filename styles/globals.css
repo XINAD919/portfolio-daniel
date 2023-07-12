@@ -19,13 +19,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
-h2,
-span,
-a {
-  color: #BBE1FA;
-}
-
 h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -84,10 +77,17 @@ h2 {
 
 .nav-links .nav-item {
   border-bottom: 0px transparent solid;
-  transition: border-bottom 0.25s ease;
+  transition: border-bottom 0.2s ease;
 }
 .nav-links .nav-item:hover {
   border-bottom: 1px #BBE1FA solid;
+}
+
+svg {
+  transition: stroke 0.2s ease;
+}
+svg path {
+  transition: stroke 0.2s ease;
 }
 
 ::-webkit-scrollbar {

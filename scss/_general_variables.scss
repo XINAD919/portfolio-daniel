@@ -26,12 +26,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
-span,
-a {
-  color: $color-quaternary;
-}
+// h1,
+// h2,
+// span,
+// a {
+//   color: $color-quaternary;
+// }
 
 h1 {
   font-size: 3rem;
@@ -94,7 +94,7 @@ h2 {
 .nav-links {
   .nav-item {
     border-bottom: 0px transparent solid;
-    transition: border-bottom .25s ease;
+    transition: border-bottom .20s ease;
 
     &:hover {
       border-bottom: 1px $color-quaternary solid;
@@ -102,6 +102,13 @@ h2 {
   }
 }
 
+svg {
+  transition: stroke .20s ease;
+
+  path {
+    transition: stroke .20s ease;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 6px;
