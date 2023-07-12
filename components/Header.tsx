@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import DarkMode from "./DarkMode";
 import { useState } from "react";
+import Hamburger from "./icons/Hamburger";
+import D from "./icons/D";
+import Lang from "./icons/Lang";
 
 const Header = () => {
   const { t } = useTranslation("header");
@@ -56,26 +59,14 @@ const HeaderMovile = () => {
       <div className='flex justify-between  items-center w-full min-w-fit relative'>
         <div className='flex rounded-full h-12 w-12'>
           <Link href='/' className='flex items-center gap-2'>
-            <Image
-              src={"D.svg"}
-              alt='imagen de la letra D dentron de un circulo'
-              width={40}
-              height={40}
-            />
+            <D />
             Daniel
           </Link>
         </div>
         <div className='flex flex-row-reverse gap-4'>
-          <Image
-            src={"hamburger-icon.svg"}
-            alt={"hamburguer icon menu"}
-            width={30}
-            height={30}
-            onClick={toggler}
-            className={"pointer"}
-          />
+          <Hamburger onClick={toggler} />
           <Link className='flex items-center' href='' locale={changeTo}>
-            <Image src={"lang.svg"} alt='lang icon' width={19} height={19} />
+            <Lang />
             {t("lang")}
           </Link>
           <DarkMode />
