@@ -206,7 +206,7 @@ svg path {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: rgb(255, 255, 125);
+  background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -214,7 +214,6 @@ svg path {
   background-color: #0F4C75;
 }
 .switch-button input:checked + .slider::before {
-  background-color: white;
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
