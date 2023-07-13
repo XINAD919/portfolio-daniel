@@ -19,12 +19,7 @@ const Header = () => {
         <div className='flex flex-row gap-1 items-center'>
           <div className='flex rounded-full h-12 w-12'>
             <Link href='/' className='flex items-center gap-2'>
-              <Image
-                src={"D.svg"}
-                alt='imagen de la letra D dentron de un circulo'
-                width={40}
-                height={40}
-              />
+              <D />
               Daniel
             </Link>
           </div>
@@ -35,7 +30,7 @@ const Header = () => {
           <Link href={`#${t("links.skills")}`}>{t("skills")}</Link>
           <Link href={`#${t("links.contact")}`}>{t("contact")}</Link>
           <Link className='flex items-center' href='' locale={changeTo}>
-            <Image src={"lang.svg"} alt='lang icon' width={19} height={19} />
+            <Lang />
             {t("lang")}
           </Link>
           <DarkMode />
