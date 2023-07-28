@@ -11,7 +11,7 @@ interface LayoutProps {
 const StyledApp = styled.div`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.color};
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 `;
 
 const lightTheme = {
@@ -24,7 +24,8 @@ const darkTheme = {
   body: "#0e0e10",
   backgroundColor: "#0e0e10",
   color: "#BBE1FA",
-  icon: "#BBE1FA'",
+  icon: "#BBE1FA",
+  border: "#BBE1FA",
 };
 
 const PublicLayout: FC<LayoutProps> = ({ children }) => {
