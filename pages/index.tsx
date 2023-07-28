@@ -6,6 +6,9 @@ import Link from "next/link";
 import styled from "styled-components";
 import DownloadButton from "../components/DownloadButton";
 import PublicLayout from "../components/PublicLayout";
+import useSWR from "swr";
+import { useEffect, useState } from "react";
+import Projects from "../components/Projects";
 
 const ImageContainer = styled.div`
   position: relative;
@@ -26,8 +29,18 @@ const ImageContainer = styled.div`
   }
 `;
 
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
 export default function Home() {
   const { t } = useTranslation("common");
+  const { data, error, isLoading } = useSWR("/api/github", fetcher);
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    data && setProjects(data);
+    console.log(data);
+  }, [data]);
+
   return (
     <>
       <Head>
@@ -61,9 +74,15 @@ export default function Home() {
         </section>
         <section className='h-screen' id={`${t("links.about")}`}>
           <h2 className='text-center'>{t("about.title")}</h2>
+          <div className='px-8 pb-16 pt-8 w-full h-full '>
+            <div className='w-full h-full rounded-md shadow-md bg-[#18181b]'></div>
+          </div>
         </section>
         <section className='h-screen' id={`${t("links.projects")}`}>
-          <h2 className='text-center'>{t("projects.title")}</h2>
+          <h2 className='text-center mb-4'>{t("projects.title")}</h2>
+          <div className='flex w-full justify-center'>
+            <Projects projects={projects} error={error} />
+          </div>
         </section>
         <section className='h-screen' id={`${t("links.skills")}`}>
           <h2 className='text-center'>{t("skills.title")}</h2>
