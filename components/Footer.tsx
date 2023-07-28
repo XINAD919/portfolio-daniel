@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div>
       <footer className='flex items-center justify-center gap-4 py-4'>
-        <GitHub link={"https://github.com/XINAD919"} />
+        <GitHub link={"https://github.com/XINAD919"} width={38} height={38} />
         <Outlook link={"mailto:da_919@hotmail.com"} />
         <Linkedin
           link={"https://www.linkedin.com/in/daniel-castano-barrera/"}
