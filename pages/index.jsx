@@ -6,9 +6,9 @@ import Link from "next/link";
 import styled from "styled-components";
 import DownloadButton from "../components/DownloadButton";
 import PublicLayout from "../components/PublicLayout";
-import useSWR from "swr";
+import useSWR, { Fetcher } from "swr";
 import { useEffect, useState } from "react";
-import Projects from "../components/Projects";
+import Projects, { Project } from "../components/Projects";
 
 const ImageContainer = styled.div`
   position: relative;
@@ -81,7 +81,7 @@ export default function Home() {
         <section className='h-screen' id={`${t("links.projects")}`}>
           <h2 className='text-center mb-4'>{t("projects.title")}</h2>
           <div className='flex w-full justify-center'>
-            <Projects projects={projects} error={error} />
+            <Projects projects={data && data} error={error} />
           </div>
         </section>
         <section className='h-screen' id={`${t("links.skills")}`}>
@@ -95,7 +95,7 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
+export const getServerSideProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale ?? "es", ["common", "header"])),
   },

@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/icons/D.jsx", "components/icons/GitHub.jsx", "components/icons/Hamburger.jsx", "components/icons/Lang.jsx", "components/icons/Linkedin.jsx", "components/icons/Outlook.jsx", "components/icons/WhatsApp.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/icons/D.jsx", "components/icons/GitHub.jsx", "components/icons/Hamburger.jsx", "components/icons/Lang.jsx", "components/icons/Linkedin.jsx", "components/icons/Outlook.jsx", "components/icons/WhatsApp.jsx", "pages/index.jsx"],
   "exclude": ["node_modules"]
 }
