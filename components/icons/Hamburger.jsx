@@ -4,7 +4,6 @@ import { ThemeContext } from "../../context/ThemeContext";
 
 const Hamburger = ({ onClick }) => {
   const theme = useTheme();
-  console.log("🚀 ~ file: Hamburger.tsx:7 ~ Hamburger ~ theme:", theme);
 
   return (
     <svg
@@ -19,9 +18,9 @@ const Hamburger = ({ onClick }) => {
       <path
         d='M5 17H19M5 12H19M5 7H19'
         stroke={theme.icon}
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );

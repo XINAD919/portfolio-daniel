@@ -1,13 +1,13 @@
 import { useTheme } from "styled-components";
 
-const GitHub = ({ link }) => {
+const GitHub = ({ link, width, height }) => {
   const theme = useTheme();
 
   return (
     <a href={link} target='__blank'>
       <svg
-        width='38'
-        height='38'
+        width={width}
+        height={!height ? width : height}
         viewBox='0 0 48 53'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
@@ -49,4 +49,4 @@ const GitHub = ({ link }) => {
   );
 };
 
-export default GitHub
+export default GitHub;
